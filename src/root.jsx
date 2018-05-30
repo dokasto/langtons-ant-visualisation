@@ -1,15 +1,15 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Board from 'components/Board/Board';
+import Index from 'components/Index/Index';
 import 'scss/style.scss';
 
 const rootElement = document.querySelector('#main');
 
-ReactDOM.render(<Board />, rootElement);
+ReactDOM.render(<Index />, rootElement);
 
 if (module.hot) {
-	module.hot.accept(Board, () => {
-		ReactDOM.render(<Board />, rootElement);
+	module.hot.accept(Index, () => {
+		ReactDOM.render(<Index />, rootElement);
 	});
 }
