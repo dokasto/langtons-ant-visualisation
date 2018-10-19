@@ -4,7 +4,7 @@ import Board from 'components/Board/Board';
 
 const Index = () => (
 	<div className="index">
-		<Board row={5} col={10} antX={3} antY={3} />
+		<Board width={805} height={450} rows={25} cols={60} />
 	</div>
 );
 

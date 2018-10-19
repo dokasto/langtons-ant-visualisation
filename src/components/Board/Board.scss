@@ -1,4 +1,17 @@
 .board {
-	border: 5px solid red;
-	width: 500px;
+	display: block;
+	line-height: 16px;
+	.grid {
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		background-color: #dfe6e9;
+		margin: 0;
+		margin-right: 1px;
+		border: none;
+		&:hover {
+			background-color: #b2bec3;
+			cursor: pointer;
+		}
+	}
 }

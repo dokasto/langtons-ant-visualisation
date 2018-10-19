@@ -1,54 +1,54 @@
 {
-  "name": "langtons-ant-visualisation",
-  "version": "1.0.0",
-  "description": "Langton's ant visualisation",
-  "main": "server.js",
-  "scripts": {
-    "dev": "NODE_ENV=development nodemon server.js",
-		"build": "rm -rf dist && NODE_ENV=production webpack --config webpack.config.js --progress --colors",
-    "test": "npm test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Udokah/langtons-ant-visualisation.git"
-  },
-  "keywords": [
-    "Langton's",
-    "ant"
-  ],
-  "author": "Udo Nkwocha",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Udokah/langtons-ant-visualisation/issues"
-  },
-  "homepage": "https://github.com/Udokah/langtons-ant-visualisation#readme",
-  "devDependencies": {
-		"autoprefixer": "7.2.4",
-		"babel-core": "6.26.0",
-		"babel-loader": "7.1.2",
-		"babel-polyfill": "6.23.0",
-		"babel-preset-es2015": "6.24.1",
-		"babel-preset-react": "6.24.1",
-		"babel-preset-react-hmre": "1.1.1",
-		"babel-preset-stage-0": "6.24.1",
-		"css-loader": "0.28.8",
-		"extract-text-webpack-plugin": "2.1.2",
-		"file-loader": "1.1.6",
-		"html-pdf": "2.2.0",
-		"node-sass": "4.7.2",
-		"nodemon": "1.14.10",
-		"postcss-loader": "2.0.10",
-		"sass-loader": "6.0.6",
-		"style-loader": "0.19.1",
-		"webpack": "3.10.0",
-		"webpack-dev-middleware": "2.0.4",
-		"webpack-hot-middleware": "2.21.0"
-	},
-	"dependencies": {
-		"express": "4.16.2",
-		"mdi": "2.1.19",
-		"normalize-scss": "7.0.0",
-		"react": "16.2.0",
-		"react-dom": "16.2.0"
-	}
+		"name": "langtons-ant-visualisation",
+		"version": "1.0.0",
+		"description": "Langton's ant visualisation",
+		"main": "server.js",
+		"scripts": {
+				"dev": "NODE_ENV=development nodemon server.js",
+				"build": "rm -rf dist && NODE_ENV=production webpack --config webpack.config.js --progress --colors",
+				"test": "npm test"
+		},
+		"repository": {
+				"type": "git",
+				"url": "git+https://github.com/Udokah/langtons-ant-visualisation.git"
+		},
+		"keywords": [
+				"Langton's",
+				"ant"
+		],
+		"author": "Udo Nkwocha",
+		"license": "ISC",
+		"bugs": {
+				"url": "https://github.com/Udokah/langtons-ant-visualisation/issues"
+		},
+		"homepage": "https://github.com/Udokah/langtons-ant-visualisation#readme",
+		"devDependencies": {
+				"autoprefixer": "7.2.4",
+				"babel-core": "6.26.0",
+				"babel-loader": "7.1.2",
+				"babel-polyfill": "6.23.0",
+				"babel-preset-es2015": "6.24.1",
+				"babel-preset-react": "6.24.1",
+				"babel-preset-react-hmre": "1.1.1",
+				"babel-preset-stage-0": "6.24.1",
+				"css-loader": "0.28.8",
+				"extract-text-webpack-plugin": "2.1.2",
+				"file-loader": "1.1.6",
+				"html-pdf": "2.2.0",
+				"node-sass": "4.7.2",
+				"nodemon": "1.14.10",
+				"postcss-loader": "2.0.10",
+				"sass-loader": "6.0.6",
+				"style-loader": "0.19.1",
+				"webpack": "3.10.0",
+				"webpack-dev-middleware": "2.0.4",
+				"webpack-hot-middleware": "2.21.0"
+		},
+		"dependencies": {
+				"express": "4.16.2",
+				"mdi": "2.1.19",
+				"normalize-scss": "7.0.0",
+				"react": "16.2.0",
+				"react-dom": "16.2.0"
+		}
 }

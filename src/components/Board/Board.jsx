@@ -1,20 +1,23 @@
 import React from 'react';
 import './Board.scss';
 
-const createGrid = ({row, col, antX, antY}) => {
+const createGrid = (row, col) => {
 	const grids = [];
+	let uniqueKey = 0;
+
 	for(let i=0; i<row; i++) {
 		for(let j=0; j<col; j++) {
-			const current = antX === j && antY === i;
-			grids.push(<span data-current={current} className="grid">1</span>);
+			uniqueKey++;
+			grids.push(<span key={uniqueKey} className="grid">&nbsp;</span>);
 		}
 	}
+	
 	return grids;
 };
 
-const Board = props => (
-	<div className="board">
-		{createGrid(props).map((Grid, index) => <Grid key={index} />)}
+const Board = ({ width, rows, cols}) => (
+	<div className="board" style={{ width: `${width}px`}}>
+		{createGrid(rows, cols)}
 	</div>
 );
 
