@@ -1,14 +1,28 @@
 .board {
 	display: block;
 	line-height: 16px;
-	.grid {
-		display: inline-block;
-		width: 15px;
-		height: 15px;
-		background-color: #dfe6e9;
-		margin: 0;
-		margin-right: 1px;
+	border: none;
+	$border: #b2bec3;
+	ul {
+		display: block;
+	}
+	li {
+		display: flex;
 		border: none;
+		&:last-child .cell {
+			border-bottom: 1px solid $border;
+		}
+	}
+	.cell {
+		display: block;
+		border-top: 1px solid $border;
+		border-left: 1px solid $border;
+		width: 10px;
+		height: 10px;
+		background-color: lighten(#dfe6e9, 5%);
+		&:last-child {
+			border-right: 1px solid $border;
+		}
 		&:hover {
 			background-color: #b2bec3;
 			cursor: pointer;

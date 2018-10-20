@@ -2,22 +2,24 @@ import React from 'react';
 import './Board.scss';
 
 const createGrid = (row, col) => {
-	const grids = [];
-	let uniqueKey = 0;
+	const cellRows = [];
 
 	for(let i=0; i<row; i++) {
+		const cellCols = [];
 		for(let j=0; j<col; j++) {
-			uniqueKey++;
-			grids.push(<span key={uniqueKey} className="grid">&nbsp;</span>);
+			cellCols.push(<span key={`row-${i}-col-${j}`} className="cell"></span>);
 		}
+		cellRows.push(<li key={`row-${i}`}>{cellCols}</li>);
 	}
 	
-	return grids;
+	return cellRows;
 };
 
 const Board = ({ width, rows, cols}) => (
 	<div className="board" style={{ width: `${width}px`}}>
-		{createGrid(rows, cols)}
+		<ul>
+			{createGrid(rows, cols)}
+		</ul>
 	</div>
 );
 

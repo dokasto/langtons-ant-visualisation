@@ -1,0 +1,31 @@
+.controls {
+	display: inline-flex;
+	width: 240px;
+	margin-top: 1rem;
+	align-items: center;
+
+	button {
+		flex: 1;
+		display: block;
+		border: none;
+		padding: 8px 10px;
+		font-size: 1rem;
+		color: #dfe6e9;
+		background-color: #2d3436;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-right: 1px;
+		outline: none;
+
+		&:hover {
+			outline: none;
+			background-color: #636e72;
+			cursor: pointer;
+		}
+
+		&:active {
+			background-color: #b2bec3;
+		}
+	}
+}
