@@ -3,10 +3,21 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+
+	h2 {
+		font-weight: bold;
+		font-size: 2rem;
+		display: block;
+		text-align: center;
+		margin-bottom: 10px;
+		margin-top: 0;
+		color: #2d3436;
+	}
+
 }
 
 .container {
-	margin-top: 50px;
+	margin-top: 10px;
 	position: relative;
 }
 

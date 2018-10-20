@@ -70,6 +70,7 @@ class Index extends React.Component {
 		return (
 			<div className="index">
 				<div className="container">
+					<h2>Langtons Ant (React)</h2>
 					<Board
 						currentAntPos={this.state.antPosition}
 						coloredCells={this.state.coloredCells}
@@ -77,7 +78,12 @@ class Index extends React.Component {
 						rows={50}
 						cols={80}
 					/>
-					<Controls onReset={this._onReset} isPaused={this.state.isPaused} onPausePlay={this._togglePause} onNext={this._onNext} />
+					<Controls
+						onReset={this._onReset}
+						isPaused={this.state.isPaused}
+						onPausePlay={this._togglePause}
+						onNext={this._onNext}
+					/>
 					<div className="steps">
 						Steps: {this.state.steps} Direction: {this.state.antDirection}
 					</div>
