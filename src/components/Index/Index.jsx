@@ -70,7 +70,7 @@ class Index extends React.Component {
 		return (
 			<div className="index">
 				<div className="container">
-					<h2>Langtons Ant (React)</h2>
+					<h2>Langtons Ant Visualisation with React</h2>
 					<Board
 						currentAntPos={this.state.antPosition}
 						coloredCells={this.state.coloredCells}
