@@ -21,12 +21,12 @@ const isAntCell = (x, y, currentAntPos) => {
 
 const move = (antPosition, previousSteps, direction) => {
 	const [antX, antY] = antPosition;
-	let antNextX = antX; 
+	let antNextX = antX;
 	let antNextY = antY;
 	let antDirection, coloredCells;
 	const antCellIsColored = isColored(antX, antY, previousSteps);
 
-	switch(direction) {
+	switch (direction) {
 		case DIRECTION.UP:
 			if (antCellIsColored) {
 				antDirection = DIRECTION.LEFT;
@@ -35,7 +35,7 @@ const move = (antPosition, previousSteps, direction) => {
 				antDirection = DIRECTION.RIGHT;
 				antNextX = antX + 1;
 			}
-		break;
+			break;
 		case DIRECTION.DOWN:
 			if (antCellIsColored) {
 				antDirection = DIRECTION.RIGHT;
@@ -44,7 +44,7 @@ const move = (antPosition, previousSteps, direction) => {
 				antDirection = DIRECTION.LEFT;
 				antNextX = antX - 1;
 			}
-		break;
+			break;
 		case DIRECTION.LEFT:
 			if (antCellIsColored) {
 				antDirection = DIRECTION.DOWN;
@@ -53,7 +53,7 @@ const move = (antPosition, previousSteps, direction) => {
 				antDirection = DIRECTION.UP;
 				antNextY = antY - 1;
 			}
-		break;
+			break;
 		case DIRECTION.RIGHT:
 			if (antCellIsColored) {
 				antDirection = DIRECTION.UP;
@@ -62,9 +62,9 @@ const move = (antPosition, previousSteps, direction) => {
 				antDirection = DIRECTION.DOWN;
 				antNextY = antY + 1;
 			}
-		break;
+			break;
 		default:
-		break;
+			break;
 	}
 
 	if (antCellIsColored) {

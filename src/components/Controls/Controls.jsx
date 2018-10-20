@@ -1,11 +1,22 @@
 import React from 'react';
 import './Controls.scss';
 
-const Controls = ({onReset, onPausePlay, onNext}) => (
+const PlayPauseButton = ({ isPaused, onClick }) => (
+	<button onClick={onClick}>
+		{isPaused ? 'Play' : 'Pause'}
+		<i className={`mdi mdi-${isPaused ? 'play' : 'pause'}`} />
+	</button>
+);
+
+const Controls = ({ onReset, isPaused, onPausePlay, onNext }) => (
 	<div className="controls">
-		<button onClick={onReset}>Reset <i className="mdi mdi-loop"></i></button>
-		<button onClick={onPausePlay}>Play <i className="mdi mdi-play-pause"></i></button>
-		<button onClick={onNext}>Next <i className="mdi mdi-skip-next"></i></button>
+		<button onClick={onReset}>
+			Reset <i className="mdi mdi-loop" />
+		</button>
+		<PlayPauseButton onClick={onPausePlay} isPaused={isPaused} />
+		<button onClick={onNext}>
+			Next <i className="mdi mdi-skip-next" />
+		</button>
 	</div>
 );
 

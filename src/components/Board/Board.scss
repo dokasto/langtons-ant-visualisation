@@ -29,14 +29,14 @@
 		}
 	}
 
-	[data-is-colored="1"] {
+	[data-is-colored='1'] {
 		background-color: #2d3436;
 		&:hover {
 			background-color: #2d3436;
 		}
 	}
 
-	[data-has-ant="true"] {
+	[data-has-ant='true'] {
 		border: 1px solid red;
 	}
 }
