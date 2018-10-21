@@ -28,41 +28,21 @@ const move = (antPosition, previousSteps, direction) => {
 
 	switch (direction) {
 		case DIRECTION.UP:
-			if (antCellIsColored) {
-				antDirection = DIRECTION.LEFT;
-				antNextX = antX - 1;
-			} else {
-				antDirection = DIRECTION.RIGHT;
-				antNextX = antX + 1;
-			}
-			break;
+			antDirection = antCellIsColored ? DIRECTION.LEFT : DIRECTION.RIGHT;
+			antNextX = antCellIsColored ? antX - 1 : antX + 1;
+		break;
 		case DIRECTION.DOWN:
-			if (antCellIsColored) {
-				antDirection = DIRECTION.RIGHT;
-				antNextX = antX + 1;
-			} else {
-				antDirection = DIRECTION.LEFT;
-				antNextX = antX - 1;
-			}
-			break;
+			antDirection = antCellIsColored ? DIRECTION.RIGHT : DIRECTION.LEFT;
+			antNextX = antCellIsColored ? antX + 1 : antX - 1;
+		break;
 		case DIRECTION.LEFT:
-			if (antCellIsColored) {
-				antDirection = DIRECTION.DOWN;
-				antNextY = antY + 1;
-			} else {
-				antDirection = DIRECTION.UP;
-				antNextY = antY - 1;
-			}
-			break;
+			antDirection = antCellIsColored ? DIRECTION.DOWN : DIRECTION.UP;
+			antNextY = antCellIsColored ? antY + 1 : antY - 1;
+		break;
 		case DIRECTION.RIGHT:
-			if (antCellIsColored) {
-				antDirection = DIRECTION.UP;
-				antNextY = antY - 1;
-			} else {
-				antDirection = DIRECTION.DOWN;
-				antNextY = antY + 1;
-			}
-			break;
+			antDirection = antCellIsColored ? DIRECTION.UP : DIRECTION.DOWN;
+			antNextY = antCellIsColored ? antY - 1 : antY + 1;
+		break;
 		default:
 			break;
 	}
