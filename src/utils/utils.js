@@ -1,10 +1,10 @@
 import DIRECTION from 'constants/direction';
 
 const isColored = (x, y, coords) => {
-	return coords.filter(coord => {
+	return coords.some(coord => {
 		const [xPos, yPos] = coord;
 		return xPos === x && yPos === y;
-	}).length;
+	});
 };
 
 const filterCoord = (x, y, coords) => {
